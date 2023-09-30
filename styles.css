@@ -1,0 +1,108 @@
+:root {
+   --primary:#146EB4;
+   --secondary: #1E2640;
+   --text:#D2D4D9;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+/* Sidebar styling */
+.sidebar {
+    height: 100%;
+    width: 14rem;
+    background-color: var(--secondary);
+    box-sizing: border-box;
+    color: white;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 1rem 0.625rem;
+    justify-content: center;
+}
+/* Profile container styling */
+.profile-container {
+    width: 12rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 2.625rem;
+    box-sizing: border-box;
+    column-gap: 0.725rem;
+    padding-left: 0.4rem;
+}
+.profile-image {
+    width: 2.625rem;
+    height: 100%;
+    border-radius: 0.25rem;
+    grid-row: 1 / span 2;
+}
+.profile-container span {
+    font-weight: bold;
+    font-size: 0.9375rem;
+}
+.profile-container small {
+    font-size: 0.8125rem;
+    text-decoration: underline;
+    grid-column-start: 2;
+    align-self: end;
+    color: var(--text);
+}
+ .arrow-head {
+    grid-column-start: 3;
+    grid-row:1 / span 2;
+    align-self: center;
+}
+
+/* Navbar styling */
+.navbar-container {
+    list-style: none;
+    padding-inline-start: 0px;
+    align-self: start;
+}
+.navbar-list-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.775rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.3rem;
+    transition: 300ms ease-in-out;
+}
+.navbar-text {
+    align-self: center;
+    font-size: 0.775rem;
+    color: var(--text);
+}
+.navbar-list-item:hover,.highlighted-nav-item {
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.10);
+    cursor: pointer;
+}
+/* Credtis container styling */
+.credits-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: #353C53;
+    border-radius: 4px;
+    column-gap: 0.725rem;
+    row-gap: 0.4rem;
+    width: 12rem;
+    padding: 0.375rem 0.75rem;
+    box-sizing: border-box;
+}
+.credits-container svg {
+    grid-row: 1 / span 2;
+    align-self: center;
+    padding: 0.375rem;
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 4px;
+}
+.credits-container span {
+    align-self: end;
+    font-size: 0.8125rem;
+}
+.credits-container b {
+    align-self: start;
+    grid-column-start: 2;
+}
