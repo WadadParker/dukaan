@@ -1,6 +1,7 @@
 :root {
    --primary:#146EB4;
    --secondary: #1E2640;
+   --hover-blue: #0E4F82;
    --text:#D2D4D9;
    --heading:#1A181E;
 }
@@ -111,16 +112,18 @@ body {
 /* Main container components */
 .main-container {
     flex-grow: 1;
+    background-color: #FAFAFA;
 }
 
 /* Header styling */
 
-header {
+.header {
     border-bottom: 1px solid #D9D9D9;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     padding: 0.75rem 2rem;
+    background-color: white;
 }
 .payouts-container {
     align-items: center;
@@ -171,4 +174,92 @@ header {
     justify-self: end;
     display: flex;
     gap: 0.75rem;
+}
+/* Main Section styles */
+.main-content-container {
+    margin: 2rem;
+}
+.overview {
+    display: flex;
+    justify-content: space-between;
+}
+.overview b {
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem;
+}
+.overview select {
+    width: 8.5625rem;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    color: #4D4D4D;
+    text-align: center;
+}
+.overview select:hover {
+    cursor: pointer;
+}
+
+/* Card styling */
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+.card {
+    padding: 1.25rem;
+    display: grid;
+    row-gap:1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0px 2px 6px 0px rgba(26, 24, 30, 0.04);
+}
+.card header {
+    display: flex;
+    gap: 0.5rem;
+}
+.card-main-section {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+.card-main-section h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.375rem;
+    margin: 0;
+}
+.card-main-section span {
+    justify-self: end;
+    text-decoration: underline;
+    color: var(--primary);
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+.card-main-section span:hover {
+    cursor: pointer;
+}
+.payout-card {
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    color: white;
+    position: relative;
+}
+#payout-orders {
+    color: white;
+}
+.payout-card-footer {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--hover-blue);
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: -1.325rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
 }
