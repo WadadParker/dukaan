@@ -24,6 +24,8 @@ body {
     grid-template-rows: auto 1fr;
     padding: 1rem 0.625rem;
     justify-content: center;
+    position: sticky;
+    top: 0;
 }
 /* Profile container styling */
 .profile-container {
@@ -51,6 +53,7 @@ body {
     grid-column-start: 2;
     align-self: end;
     color: var(--text);
+    cursor: pointer;
 }
  .arrow-head {
     grid-column-start: 3;
@@ -114,6 +117,7 @@ body {
 .main-container {
     flex-grow: 1;
     background-color: #FAFAFA;
+    overflow-y: scroll;
 }
 
 /* Header styling */
@@ -175,6 +179,7 @@ body {
     justify-self: end;
     display: flex;
     gap: 0.75rem;
+    cursor: pointer;
 }
 /* Main Section styles */
 .main-content-container {
@@ -220,6 +225,9 @@ body {
 .card header {
     display: flex;
     gap: 0.5rem;
+}
+.card header svg {
+    cursor: pointer;
 }
 .card-main-section {
     display: grid;
@@ -286,10 +294,16 @@ body {
 
 /* Orders styles */
 .orders-header {
-    display: flex;
+    display: grid;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px 0px rgba(26, 24, 30, 0.04);
+    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
-    align-content: center;
     align-items: center;
+    padding: 0.75rem 0.75rem 0.5rem 0.75rem;
+    row-gap: 0.75rem;
+    margin-top: 1.5rem;
 }
 .order-search-container {
     align-items: center;
@@ -301,7 +315,6 @@ body {
     grid-template-columns: auto 1fr;
     gap: 0.5rem;
     padding: 0.625rem 1rem;
-    margin: 0.75rem;
     width: 15.5rem;
 }
 .order-search {
@@ -313,6 +326,7 @@ body {
     display: grid;
     grid-template-columns: auto auto;
     gap: 1rem;
+    justify-self: right;
 }
 .icon {
     border: 1px solid var(--gray-light);
@@ -331,4 +345,38 @@ body {
 }
 .icon:hover,.sort-button:hover {
     cursor: pointer;
+}
+
+/* Table Style */
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    grid-column: 1/span 2;
+}
+.table-headers {
+    background-color: #F2F2F2;
+    border-radius: 4px;
+}
+th {
+    color: #4D4D4D;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid #F2F2F2;
+
+}
+td {
+    color: #4D4D4D;
+    padding: 0.875rem 0.75rem;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25rem;
+}
+.order-amount {
+    text-align: right;
+}
+/* Table cells stylings*/
+.order-id {
+    color: var(--primary);
 }
